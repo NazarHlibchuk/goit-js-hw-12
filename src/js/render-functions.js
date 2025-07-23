@@ -42,13 +42,21 @@ export function hideLoader() {
   loader.classList.remove('visible');
 }
 
+
 export function showLoadMoreButton() {
-  loadMoreBtn.classList.remove('hidden');
+  const btn = document.querySelector('.load-more');
+  if (btn) {
+    btn.style.display = 'block';
+  }
 }
 
 export function hideLoadMoreButton() {
-  loadMoreBtn.classList.add('hidden');
+  const btn = document.querySelector('.load-more');
+  if (btn) {
+    btn.style.display = 'none';
+  }
 }
+
 
 export function refreshLightbox() {
   if (lightbox) lightbox.refresh();

@@ -23,6 +23,7 @@ let totalHits = 0;
 const form = document.querySelector('.form');
 const input = document.querySelector('input[name="search-text"]');
 const loadMoreBtn = document.querySelector('.load-more');
+ hideLoadMoreButton(); // ховаємо кнопку перед пошуком
 
 
 form.addEventListener('submit', async e => {
@@ -40,6 +41,8 @@ form.addEventListener('submit', async e => {
   //
   clearGallery();
   showLoader();
+ 
+
 
   try {
     const data = await getImagesByQuery(currentQuery, currentPage); //замість(query)
